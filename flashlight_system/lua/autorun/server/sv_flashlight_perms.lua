@@ -1,4 +1,4 @@
-hook.Add( "PlayerInitialSpawn", "onspawnflashlight", function( ply, enabled )
+hook.Add( "PlayerInitialSpawn", "onspawnflashlight", function( ply )
 hook.Run("BlockFlashLight")-- runs the hook function
 ply.canuseflashlightvar = false -- stores variable on player and makes it false first spawning
 end)
@@ -14,7 +14,7 @@ end )
 
 
 
-hook.Add( "PlayerDeath", "blockflashon", function( ply, enabled ) -- when player dies then they can't turn on flashlight again
+hook.Add( "PlayerDeath", "blockflashon", function( ply ) -- when player dies then they can't turn on flashlight again
 ply.canuseflashlightvar = false
 end)
 
